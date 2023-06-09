@@ -95,18 +95,18 @@ const MintNFT = () => {
             return socialLoginSDK;
         }
         const sdk = new SocialLogin();
-        const signature1 = await sdk.whitelistUrl('https://chat-wallet.vercel.app/');
-        const signature2 = await sdk.whitelistUrl('https://chat-wallet.vercel.app/profile');
-        const signature3 = await sdk.whitelistUrl('https://chat-wallet.vercel.app/send');
-        const signature4 = await sdk.whitelistUrl('https://chat-wallet.vercel.app/mint');
+        const signature1 = await sdk.whitelistUrl('https://chat-wallet-eth.vercel.app/');
+        const signature2 = await sdk.whitelistUrl('https://chat-wallet-eth.vercel.app/profile');
+        const signature3 = await sdk.whitelistUrl('https://chat-wallet-eth.vercel.app/send');
+        const signature4 = await sdk.whitelistUrl('https://chat-wallet-eth.vercel.app/mint');
         await sdk.init({
             chainId: ethers.utils.hexValue(chain),
             // clientId: "BM1-f8IA72Mqp5cT2yNa0RE2X3FYHRl5R0NNixUccEWGSoU_YgLap5awE2faN3pIij713FvDI4YXvLuTd54iOy0",
             whitelistUrls: {
-              'https://chat-wallet.vercel.app/': signature1,
-              'https://chat-wallet.vercel.app/profile': signature2,
-              'https://chat-wallet.vercel.app/send': signature3,
-              'https://chat-wallet.vercel.app/mint': signature4,
+              'https://chat-wallet-eth.vercel.app/': signature1,
+              'https://chat-wallet-eth.vercel.app/profile': signature2,
+              'https://chat-wallet-eth.vercel.app/send': signature3,
+              'https://chat-wallet-eth.vercel.app/mint': signature4,
             },
         });
         setSocialLoginSDK(sdk);

@@ -97,13 +97,13 @@ const Home = () => {
             return socialLoginSDK;
         }
         const sdk = new SocialLogin();
-        const signature1 = await sdk.whitelistUrl('https://chat-wallet.vercel.app');
-        const signature2 = await sdk.whitelistUrl('https://chat-wallet.vercel.app/send');
+        const signature1 = await sdk.whitelistUrl('https://chat-wallet-eth.vercel.app');
+        const signature2 = await sdk.whitelistUrl('https://chat-wallet-eth.vercel.app/send');
         await sdk.init({
             chainId: ethers.utils.hexValue(chain),
             whitelistUrls: {
-              'https://chat-wallet.vercel.app': signature1,
-              'https://chat-wallet.vercel.app/send': signature2,
+              'https://chat-wallet-eth.vercel.app': signature1,
+              'https://chat-wallet-eth.vercel.app/send': signature2,
             },
         });
         setSocialLoginSDK(sdk);
