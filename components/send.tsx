@@ -71,7 +71,8 @@ const Send = () => {
     const [messages, setMessages] = useState('');
     const [inputValue, setInputValue] = useState('');
     // chainId: ChainId.POLYGON_MAINNET, ChainId.POLYGON_MUMBAI, ChainId.GOERLI
-    const [chain, setChain] = useState(ChainId.POLYGON_MAINNET);
+    // const [chain, setChain] = useState(ChainId.POLYGON_MAINNET);
+    const [chain, setChain] = useState(ChainId.MAINNET);
 
     // Get the query parameter from the URL
     let router = useRouter();
